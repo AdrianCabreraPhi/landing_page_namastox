@@ -1,101 +1,40 @@
 import Image from "next/image";
-
+import { TbBrowserShare, TbBrandGithub } from "react-icons/tb";
+import namastox_portada from "./assets/screenshot_namastox.png"
+import { Fade } from "react-awesome-reveal";
+import { cn } from "@/lib/utils";
+import { BackgroundLines } from "./components/ui/background-lines";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      {/* home */}
+      <Fade cascade delay={300} >
+        <div id="home" className="h-screen w-full flex items-center  md:mt-24 justify-center md:justify-between flex-col gap-2">
+          <div className="flex flex-col items-center relative gap-2">
+            <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
+              <span className="text-6xl   md:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384]  to-[#CE5D69] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Namastox</span>
+            </BackgroundLines>
+            <span className="text-[#7E7E7E] w-6/6 text-center md:w-4/6 ">Software tool for supporting the implementation of New Assessment Methods (NAMs) within a New Generation Risk Assessment (NGRA) framework.</span>
+            <a href="https://namastox.upf.edu" target="_blank" className="p-[3px] relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#4E4384] to-[#CE5D69] rounded-lg" />
+              <div className="px-8 py-2 flex flex-row gap-2 items-center  bg-white rounded-[6px]  relative group transition duration-200 text-black hover:bg-transparent hover:text-white">
+                Go Namastox  <TbBrowserShare size={20} />
+              </div>
+            </a>
+          </div>
+          <div className="preview-software w-full flex items-center justify-center px-4">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <Image className=" w-[500px] md:w-[1400px] rounded-xl shadow-2xl shadow-[#4E4384]" src={namastox_portada} alt="software " />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div id="about" className="h-screen w-full">
+          <h1>About</h1>
+        </div>
+        <div id="resources" className="h-screen w-full">
+          <h1>Resources to Learn</h1>
+        </div>
+      </Fade>
+    </>
+
   );
 }
