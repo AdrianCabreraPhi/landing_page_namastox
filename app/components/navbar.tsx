@@ -29,8 +29,8 @@ export default function Navbar() {
                 </Link>
             </nav>
             <div className="hidden md:visible container-partners md:flex flex-row items-center">
-                <Image className="w-[100px]" src={aspis_logo} alt="aspis logo" />
-                <Image className="w-[100px]" src={risk_hunter_logo} alt="aspis logo" />
+                <Image className="w-[100px] grayscale transition-all duration-300 ease-in-out hover:grayscale-0" src={aspis_logo} alt="aspis logo" />
+                <Image className="w-[100px] grayscale transition-all duration-300 ease-in-out hover:grayscale-0" src={risk_hunter_logo} alt="aspis logo" />
             </div>
         </div>
 

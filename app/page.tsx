@@ -1,16 +1,18 @@
 import Image from "next/image";
-import { TbBrowserShare, TbBrandGithub } from "react-icons/tb";
+import { TbBrowserShare } from "react-icons/tb";
 import namastox_portada from "./assets/screenshot_namastox.png"
 import { Fade } from "react-awesome-reveal";
 import { cn } from "@/lib/utils";
 import { BackgroundLines } from "./components/ui/background-lines";
+
+
 export default function Home() {
   return (
     <>
       {/* home */}
       <Fade cascade delay={300} >
         <div id="home" className="h-screen w-full flex items-center  md:mt-24 justify-center md:justify-between flex-col gap-2">
-          <div className="flex flex-col items-center relative gap-2">
+          <div className="flex flex-col hero-text items-center relative gap-2">
             <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
               <span className="text-6xl   md:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384]  to-[#CE5D69] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Namastox</span>
             </BackgroundLines>
@@ -23,7 +25,6 @@ export default function Home() {
             </a>
           </div>
           <div className="preview-software w-full flex items-center justify-center px-4">
-
             <Image className=" w-[500px] md:w-[1400px] rounded-xl shadow-2xl shadow-[#4E4384]" src={namastox_portada} alt="software " />
           </div>
         </div>
