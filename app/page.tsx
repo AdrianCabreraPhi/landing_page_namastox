@@ -18,7 +18,7 @@ import keycloak_icon from "./assets/keycloak_icon.png";
 import { GiPadlock } from "react-icons/gi";
 import { HoverEffect } from "./components/ui/card-hover-effect";
 
-export const tutorials = [
+ const tutorials = [
     {
       title:"Create a new RA",
       link:"https://drive.google.com/file/d/17FPzaVE1tzNcwi3nP1jXF43jvoSx1Xpw/view"
@@ -43,11 +43,6 @@ export const tutorials = [
       title:"Project management",
       link:"https://drive.google.com/file/d/1AKXig2ASWMTS5iLqF-n2LQ865ZRzGilQ/view"
     },
-
-
-
-
-
 ]
 
 export default function Home() {
