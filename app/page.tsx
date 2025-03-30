@@ -1,6 +1,12 @@
 "use client";
 import Image from "next/image";
-import { TbBrowserShare, TbArrowGuide, TbFileDatabase } from "react-icons/tb";
+import {
+  TbBrowserShare,
+  TbArrowGuide,
+  TbFileDatabase,
+  TbInfoSmall,
+} from "react-icons/tb";
+import { GrInstall } from "react-icons/gr";
 import namastox_portada from "./assets/screenshot_namastox.png";
 import { Fade } from "react-awesome-reveal";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -10,6 +16,40 @@ import word_icon from "./assets/word_icon.svg";
 import keycloak_icon from "./assets/keycloak_icon.png";
 
 import { GiPadlock } from "react-icons/gi";
+import { HoverEffect } from "./components/ui/card-hover-effect";
+
+export const tutorials = [
+    {
+      title:"Create a new RA",
+      link:"https://drive.google.com/file/d/17FPzaVE1tzNcwi3nP1jXF43jvoSx1Xpw/view"
+    },
+    {
+      title:"Executing a task",
+      link:"https://drive.google.com/file/d/1TaPsgqTesrx2kdPxViZ2nO3Bfq6LCNuH/view"
+    },
+    {
+      title:"Making decisions",
+      link:"https://drive.google.com/file/d/1xKlXPA0fk0a--rHdeo1W1GtFjNGrPDlL/view"
+    },
+    {
+      title:"Review results and decisions",
+      link:"https://drive.google.com/file/d/1a57Q-YlWtUpAKSPjYFTB80LOMO7drdDY/view"
+    },
+    {
+      title:"Generating reports",
+      link:"https://drive.google.com/file/d/1Y5dfElFdavgh5JqWUpmr0KbRrtDuf-Hp/view"
+    },
+    {
+      title:"Project management",
+      link:"https://drive.google.com/file/d/1AKXig2ASWMTS5iLqF-n2LQ865ZRzGilQ/view"
+    },
+
+
+
+
+
+]
+
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const scaleValueHeroText = useTransform(
@@ -91,7 +131,7 @@ export default function Home() {
                 </span>
               </div>
             </Fade> */}
-{/* 
+            {/* 
             <Fade bottom delay={600}>
               <div className="md:ml-10 mb-10 transition-all duration-300 ease-in-out border-l-4 pl-2 hover:pl-4 border-gray-300  hover:border-[#4E4384]">
                 <span className="text-sm md:text-3xl leading-relaxed  text-left">
@@ -101,110 +141,167 @@ export default function Home() {
                 </span>
               </div>
             </Fade> */}
-            <div className="flex flex-col items-center justify-center mx-auto mt-40 p-20 w-full rounded bg-neutral-50  ">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69] mb-24 text-xl">what does namastox have for you?</span>
-              <Fade cascade delay={200}>
-              <div className="grid grid-cols-6 grid-rows-6 gap-6">
-  
-                <div className="col-span-2 row-span-6 w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-l-3xl rounded-r-lg">
-                  <div className="flex flex-col gap-5">
-                    <div className="flex flex-row gap-1 items-center justify-between">
-                      <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
-                        Step-by-step guide{" "}
-                      </span>{" "}
-                      <TbArrowGuide
-                        className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
-                        size={25}
-                      />
-                    </div>
-                    <span className="text-sm/6 text-gray-600 mt-3">
-                      For the user through the ASPA workflow via a simple
-                      graphical interface, suggesting the most appropriate NAMs
-                      (in vitro, in silico).
+            <Fade>
+              <div className="flex flex-col items-center justify-center mx-auto mt-40 p-20 w-full rounded bg-neutral-50   ">
+                <Fade delay={200}>
+                  <div className="mb-24">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]  text-xl">
+                      what does namastox have for you?
                     </span>
-                    <div className="flex justify-center">
-                      <Image
-                        quality={100}
-                        className="w-[250px]  flex items-center justify-center"
-                        src={aspa}
-                        alt="workflow"
-                      />
-                    </div>
                   </div>
-                </div>
-                <div className="col-span-2 row-span-3 col-start-3 w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-lg">
-                  <div className="flex flex-col gap-5">
-                    <div className="flex flex-row gap-1 items-center justify-between">
-                      <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
-                        Data
-                      </span>{" "}
-                      <TbFileDatabase
-                        className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
-                        size={25}
-                      />
+                </Fade>
+                <Fade cascade delay={400}>
+                  <div className="grid grid-cols-6 grid-rows-6 gap-6">
+                    <div className="col-span-2  row-span-6 w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-l-3xl rounded-r-lg">
+                      <div className="flex flex-col gap-5">
+                        <div className="flex flex-row gap-1 items-center justify-between">
+                          <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
+                            Step-by-step guide
+                          </span>
+                          <TbArrowGuide
+                            className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
+                            size={25}
+                          />
+                        </div>
+                        <span className="text-sm/6 text-gray-600 mt-3">
+                          For the user through the ASPA workflow via a simple
+                          graphical interface, suggesting the most appropriate
+                          NAMs (in vitro, in silico).
+                        </span>
+                        <div className="flex justify-center">
+                          <Image
+                            quality={100}
+                            className="w-[250px]  flex items-center justify-center"
+                            src={aspa}
+                            alt="workflow"
+                          />
+                        </div>
+                      </div>
                     </div>
-                    <span className="text-sm/6 text-gray-600 mt-3">
-                      A collection of all the data generated in the process for
-                      review and documentation. Reports in standard formats can
-                      be generated, facilitating the transparency of the process
-                      and its adoption by regulatory bodies.
-                    </span>
-                    <div className="flex flex-row justify-center">
-                      <Image
-                        quality={100}
-                        className="w-[150px]"
-                        src={excel_icon}
-                        alt="excel"
-                      />
-                      <Image
-                        quality={100}
-                        className="w-[150px]"
-                        src={word_icon}
-                        alt="word"
-                      />
+                    <div className="col-span-2 row-span-3 col-start-3 w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-lg">
+                      <div className="flex flex-col gap-5">
+                        <div className="flex flex-row gap-1 items-center justify-between">
+                          <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
+                            Data
+                          </span>{" "}
+                          <TbFileDatabase
+                            className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
+                            size={25}
+                          />
+                        </div>
+                        <span className="text-sm/6 text-gray-600 mt-3">
+                          A collection of all the data generated in the process
+                          for review and documentation. Reports in standard
+                          formats can be generated, facilitating the
+                          transparency of the process and its adoption by
+                          regulatory bodies.
+                        </span>
+                        <div className="flex flex-row justify-center">
+                          <Image
+                            quality={100}
+                            className="w-[150px] grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
+                            src={excel_icon}
+                            alt="excel"
+                          />
+                          <Image
+                            quality={100}
+                            className="w-[150px] grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
+                            src={word_icon}
+                            alt="word"
+                          />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div className="col-span-2 row-span-3 col-start-3 row-start-4 w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-lg">
-                  <div className="flex flex-col gap-5">
-                    <div className="flex flex-row gap-1 items-center justify-between">
-                      <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
-                        Security
-                      </span>{" "}
-                      <GiPadlock
-                        className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
-                        size={25}
-                      />
-                    </div>
-                    <span className="text-sm/6 text-gray-600 mt-3">
-                    The application is protected with a login system based on Keycloak.
-                    This also allows you to control who has access to your risk assesments.
-                    </span>
+                    <div className="col-span-2 row-span-3 col-start-3 row-start-4 w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-lg">
+                      <div className="flex flex-col gap-5">
+                        <div className="flex flex-row gap-1 items-center justify-between">
+                          <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
+                            Security
+                          </span>{" "}
+                          <GiPadlock
+                            className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
+                            size={25}
+                          />
+                        </div>
+                        <span className="text-sm/6 text-gray-600 mt-3">
+                          The application is protected with a login system based
+                          on Keycloak. This also allows you to control who has
+                          access to your risk assesments.
+                        </span>
 
-                    <div className="flex flex-row justify-center">
-                      <Image
-                        quality={100}
-                        className="w-[200px] mt-2"
-                        src={keycloak_icon}
-                        alt="excel"
-                      />
-  
+                        <div className="flex flex-row justify-center">
+                          <Image
+                            quality={100}
+                            className="w-[200px] mt-2 grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
+                            src={keycloak_icon}
+                            alt="excel"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-span-2 row-span-6 col-start-5 row-start-1 w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-r-3xl rounded-l-lg">
+                      <div className="flex flex-col justify-between gap-5">
+                        <div className="flex flex-row gap-1 items-center justify-between">
+                          <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
+                            ""
+                          </span>
+                          <TbInfoSmall
+                            className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
+                            size={25}
+                          />
+                        </div>
+                        <span className="text-sm/6 text-gray-600  mt-3">
+                          The application of in silico tools and access to
+                          information resources, especially for those available
+                          online. Some in silico tools can be run directly from
+                          the interface, while others can be accessed using
+                          links.
+                        </span>
+                        <span className="text-sm/6 text-gray-600 mt-3">
+                          Tracking of the uncertainties identified in the
+                          process and presenting this information at decision
+                          nodes, facilitating uncertainty-aware decision-making.
+                        </span>
+
+                        <div className="flex flex-row gap-1 items-center justify-between">
+                          <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
+                            Accessibility
+                          </span>
+                          <GrInstall
+                            className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
+                            size={25}
+                          />
+                        </div>
+
+                        <span className="text-sm/6 text-gray-600 ">
+                          NAMASTOX can be installed as a freely accessible tool
+                          on the Internet, in a private server, or locally on a
+                          desktop computer
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="col-span-2 row-span-6 col-start-5 row-start-1">
-                  4
-                </div>
+                </Fade>
               </div>
-              </Fade>
-            </div>
+            </Fade>
           </div>
         </div>
       </div>
+            <Fade cascade delay={200}>
+      <div id="resources" className="h-screen w-full ">
+        <div className="w-full flex flex-col items-center justify-center">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]  text-xl">
+        Documentation
+        </span>
+        <span className="text-sm text-gray-400">small explanatory videos</span>
+        </div>
 
-      <div id="resources" className="h-screen w-full">
-        <h1>Resources to Learn</h1>
+        <div className="max-w-6xl mx-auto px-8">
+        <HoverEffect items={tutorials} />
+        </div>
+
       </div>
+      </Fade>
     </>
   );
 }

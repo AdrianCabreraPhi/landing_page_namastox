@@ -24,7 +24,7 @@ export default function Navbar() {
 
                 <Link href="#resources">
                     <span className="text-xl text-gray-400">
-                        Resources to Learn
+                        Documentation
                     </span>
                 </Link>
             </nav>
