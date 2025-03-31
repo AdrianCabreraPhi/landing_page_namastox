@@ -336,12 +336,14 @@ export default function Home() {
           </div>
         </Fade>
       </div>
+      <Fade  triggerOnce>
       <div className=" w-full  border-t flex flex-col items-center justify-center text-neutral-600 py-3">
         <div className="flex flex-row">
           <AnimatedTooltip items={people} />
         </div>
         <span> © Developed by Pharmacoinformatics Group UPF</span>
       </div>
+      </Fade>
     </>
   );
 }
