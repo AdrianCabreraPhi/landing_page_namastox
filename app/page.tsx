@@ -18,7 +18,9 @@ import word_icon from "./assets/word_icon.svg";
 import keycloak_icon from "./assets/keycloak_icon.png";
 import { GiPadlock } from "react-icons/gi";
 import { HoverEffect } from "./components/ui/card-hover-effect";
-
+import adrian from "./assets/adrian.jpeg";
+import manuel from "./assets/manuel.jpeg";
+import { AnimatedTooltip } from "./components/ui/animated-tooltip";
 const tutorials = [
   {
     title: "Create a new RA",
@@ -44,6 +46,22 @@ const tutorials = [
     title: "Project management",
     link: "https://drive.google.com/file/d/1AKXig2ASWMTS5iLqF-n2LQ865ZRzGilQ/view",
   },
+];
+
+const people = [
+  {
+    id: 1,
+    name: "Manuel Pastor",
+    designation: "Head of PharmacoInformatics",
+    image: manuel,
+  },
+  {
+    id: 2,
+    name: "Adrian Cabrera",
+    designation: "Full Stack Developer",
+    image: adrian,
+  },
+
 ];
 
 export default function Home() {
@@ -105,7 +123,7 @@ export default function Home() {
           >
             <Image
               quality={100}
-              className="w-[500px] transform  md:w-[1400px] rounded-xl shadow-2xl shadow-[#4E4384]"
+              className="w-[500px] transform  md:w-[1600px] rounded-xl shadow-2xl shadow-[#4E4384]"
               src={namastox_portada}
               alt="software"
             />
@@ -317,6 +335,12 @@ export default function Home() {
             <HoverEffect items={tutorials} />
           </div>
         </Fade>
+      </div>
+      <div className=" w-full  border-t flex flex-col items-center justify-center text-neutral-600 py-3">
+        <div className="flex flex-row">
+          <AnimatedTooltip items={people} />
+        </div>
+        <span> © Developed by Pharmacoinformatics Group UPF</span>
       </div>
     </>
   );
