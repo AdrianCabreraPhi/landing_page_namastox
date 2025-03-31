@@ -5,6 +5,8 @@ import {
   TbArrowGuide,
   TbFileDatabase,
   TbInfoSmall,
+  TbBrandGithub,
+  TbBrandLinkedin,
 } from "react-icons/tb";
 import { GrInstall } from "react-icons/gr";
 import namastox_portada from "./assets/screenshot_namastox.png";
@@ -14,36 +16,35 @@ import aspa from "./assets/aspa.png";
 import excel_icon from "./assets/excel_icon.svg";
 import word_icon from "./assets/word_icon.svg";
 import keycloak_icon from "./assets/keycloak_icon.png";
-
 import { GiPadlock } from "react-icons/gi";
 import { HoverEffect } from "./components/ui/card-hover-effect";
 
- const tutorials = [
-    {
-      title:"Create a new RA",
-      link:"https://drive.google.com/file/d/17FPzaVE1tzNcwi3nP1jXF43jvoSx1Xpw/view"
-    },
-    {
-      title:"Executing a task",
-      link:"https://drive.google.com/file/d/1TaPsgqTesrx2kdPxViZ2nO3Bfq6LCNuH/view"
-    },
-    {
-      title:"Making decisions",
-      link:"https://drive.google.com/file/d/1xKlXPA0fk0a--rHdeo1W1GtFjNGrPDlL/view"
-    },
-    {
-      title:"Review results and decisions",
-      link:"https://drive.google.com/file/d/1a57Q-YlWtUpAKSPjYFTB80LOMO7drdDY/view"
-    },
-    {
-      title:"Generating reports",
-      link:"https://drive.google.com/file/d/1Y5dfElFdavgh5JqWUpmr0KbRrtDuf-Hp/view"
-    },
-    {
-      title:"Project management",
-      link:"https://drive.google.com/file/d/1AKXig2ASWMTS5iLqF-n2LQ865ZRzGilQ/view"
-    },
-]
+const tutorials = [
+  {
+    title: "Create a new RA",
+    link: "https://drive.google.com/file/d/17FPzaVE1tzNcwi3nP1jXF43jvoSx1Xpw/view",
+  },
+  {
+    title: "Executing a task",
+    link: "https://drive.google.com/file/d/1TaPsgqTesrx2kdPxViZ2nO3Bfq6LCNuH/view",
+  },
+  {
+    title: "Making decisions",
+    link: "https://drive.google.com/file/d/1xKlXPA0fk0a--rHdeo1W1GtFjNGrPDlL/view",
+  },
+  {
+    title: "Review results and decisions",
+    link: "https://drive.google.com/file/d/1a57Q-YlWtUpAKSPjYFTB80LOMO7drdDY/view",
+  },
+  {
+    title: "Generating reports",
+    link: "https://drive.google.com/file/d/1Y5dfElFdavgh5JqWUpmr0KbRrtDuf-Hp/view",
+  },
+  {
+    title: "Project management",
+    link: "https://drive.google.com/file/d/1AKXig2ASWMTS5iLqF-n2LQ865ZRzGilQ/view",
+  },
+];
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -52,7 +53,7 @@ export default function Home() {
     [0, 0.5, 1],
     [1, 0.5, 0]
   );
-  const opacityHeroText = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  const opacityHeroText = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   return (
     <>
       {/* home */}
@@ -73,16 +74,30 @@ export default function Home() {
               Methods (NAMs) within a New Generation Risk Assessment (NGRA)
               framework.
             </span>
-            <a
-              href="https://namastox.upf.edu"
-              target="_blank"
-              className="p-[3px] relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#4E4384] to-[#CE5D69] rounded-lg" />
-              <div className="px-8 py-2 flex flex-row gap-2 items-center bg-white rounded-[6px] relative group transition duration-200 text-black hover:bg-transparent hover:text-white">
-                Go Namastox <TbBrowserShare size={20} />
-              </div>
-            </a>
+            <div className="flex flex-row items-center gap-4">
+              <a
+                href="https://github.com/phi-grib/namastox"
+                target="_blank"
+                className=" cursor-pointer   bg-transparent"
+              >
+                <div className="social-links group flex flex-row transition-colors duration-300 ease-in-out hover:bg-neutral-50 gap-2 rounded-xl px-8 py-2 border border-dashed">
+                  <TbBrandGithub
+                    className="text-gray-400 transition-color duration-300 ease-in-out group-hover:text-gray-950"
+                    size={27}
+                  />
+                </div>
+              </a>
+              <a
+                href="https://namastox.upf.edu"
+                target="_blank"
+                className="p-[3px] relative"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-[#4E4384] to-[#CE5D69] rounded-lg" />
+                <div className="px-8 py-2 flex flex-row gap-2 items-center bg-white rounded-[6px] relative group transition duration-200 text-black hover:bg-transparent hover:text-white">
+                  Go Namastox <TbBrowserShare size={20} />
+                </div>
+              </a>
+            </div>
           </motion.div>
           <motion.div
             style={{ scale: scaleValueHeroText, opacity: opacityHeroText }}
@@ -97,9 +112,9 @@ export default function Home() {
           </motion.div>
         </div>
       </Fade>
-      <div id="about" className="h-screen flex flex-row w-full mt-[10vh]">
+      <div id="about" className="h-screen flex flex-row w-full">
         <div className="main flex flex-row w-full justify-around">
-          <div className="flex flex-col w-5/6">
+          <div className="flex flex-col">
             {/* <span className="text-xl md:text-4xl mb-10 text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
               About Namastox
             </span> */}
@@ -137,7 +152,7 @@ export default function Home() {
               </div>
             </Fade> */}
             <Fade>
-              <div className="flex flex-col items-center justify-center mx-auto mt-40 p-20 w-full rounded bg-neutral-50   ">
+              <div className="flex flex-col items-center justify-center mx-auto mt-40 p-20 w-full rounded    ">
                 <Fade delay={200}>
                   <div className="mb-24">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]  text-xl">
@@ -194,13 +209,13 @@ export default function Home() {
                         <div className="flex flex-row justify-center">
                           <Image
                             quality={100}
-                            className="w-[150px] grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
+                            className="w-[150px] "
                             src={excel_icon}
                             alt="excel"
                           />
                           <Image
                             quality={100}
-                            className="w-[150px] grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
+                            className="w-[150px]  "
                             src={word_icon}
                             alt="word"
                           />
@@ -227,7 +242,7 @@ export default function Home() {
                         <div className="flex flex-row justify-center">
                           <Image
                             quality={100}
-                            className="w-[200px] mt-2 grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
+                            className="w-[200px] mt-2  "
                             src={keycloak_icon}
                             alt="excel"
                           />
@@ -238,7 +253,7 @@ export default function Home() {
                       <div className="flex flex-col justify-between gap-5">
                         <div className="flex flex-row gap-1 items-center justify-between">
                           <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
-                            ""
+                            Information
                           </span>
                           <TbInfoSmall
                             className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
@@ -282,21 +297,27 @@ export default function Home() {
           </div>
         </div>
       </div>
-            <Fade cascade delay={200}>
-      <div id="resources" className="h-screen w-full ">
-        <div className="w-full flex flex-col items-center justify-center">
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]  text-xl">
-        Documentation
-        </span>
-        <span className="text-sm text-gray-400">small explanatory videos</span>
-        </div>
 
-        <div className="max-w-6xl mx-auto px-8">
-        <HoverEffect items={tutorials} />
-        </div>
-
+      <div
+        id="resources"
+        className="h-screen flex flex-col items-center justify-center w-full"
+      >
+        <Fade cascade delay={200}>
+          <div className="w-full flex flex-col items-center justify-center">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]  text-xl">
+              Documentation
+            </span>
+            <span className="text-sm text-gray-400">
+              small explanatory videos
+            </span>
+          </div>
+        </Fade>
+        <Fade cascade delay={300}>
+          <div className="max-w-6xl mx-auto px-8">
+            <HoverEffect items={tutorials} />
+          </div>
+        </Fade>
       </div>
-      </Fade>
     </>
   );
 }
