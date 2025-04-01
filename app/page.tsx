@@ -318,7 +318,7 @@ export default function Home() {
 
       <div
         id="resources"
-        className="flex flex-col items-center  mt-64 justify-center w-full  mb-20"
+        className="flex flex-col items-center  pt-64 justify-center w-full  mb-64"
       >
         <Fade cascade delay={200}>
           <div className="w-full flex flex-col items-center justify-center">
