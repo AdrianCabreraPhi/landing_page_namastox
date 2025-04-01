@@ -3,15 +3,41 @@
     animation: header-blur-scroll 0.3s linear both;
     animation-timeline: scroll();
     animation-range: 0px 250px;
-    border-bottom: 1px solid transparent
+    border-bottom: 1px dashed transparent
+}
+
+.partner-image {
+    animation: grayscale-partners-scroll 0.3s linear both;
+    animation-timeline:  scroll();
+    animation-range: 0px 250px;
+    filter: grayscale(100%);
 }
 
 
+
+
+@keyframes grayscale-partners-scroll {
+    25% {
+        filter: grayscale(75%)
+    }
+    50% {
+        filter: grayscale(50%)
+    }
+    75% {
+        filter: grayscale(25%)
+        
+    }
+    100%{
+        filter: grayscale(0%);
+    }
+    
+} 
 
 @keyframes header-blur-scroll {
     0% {
         backdrop-filter: blur(0px);
         background: transparent;
+        
     }
 
     100% {

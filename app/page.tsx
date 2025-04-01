@@ -78,11 +78,11 @@ export default function Home() {
       <Fade cascade delay={300}>
         <div
           id="home"
-          className="h-screen w-full flex items-center  md:mt-24 justify-center md:justify-between flex-col gap-2"
+          className="h-screen w-full flex items-center  lg:mt-24 justify-around sm:justify-between flex-col gap-2"
         >
           <motion.div
-            style={{ scale: scaleValueHeroText, opacity: opacityHeroText }}
-            className="flex flex-col hero-text items-center relative gap-2"
+            style={{ scale: scaleValueHeroText }}
+            className="flex flex-col hero-text items-center  relative gap-2"
           >
             <span className="text-6xl md:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
               Namastox
@@ -123,14 +123,14 @@ export default function Home() {
           >
             <Image
               quality={100}
-              className="w-[500px] transform  md:w-[1600px] rounded-xl shadow-2xl shadow-[#4E4384]"
+              className="w-[100vw] transform  lg:w-[60vw] rounded-xl shadow-2xl shadow-[#4E4384]"
               src={namastox_portada}
               alt="software"
             />
           </motion.div>
         </div>
       </Fade>
-      <div id="about" className="h-screen flex flex-row w-full">
+      <div id="about" className=" flex flex-row w-full">
         <div className="main flex flex-row w-full justify-around">
           <div className="flex flex-col">
             {/* <span className="text-xl md:text-4xl mb-10 text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
@@ -170,17 +170,17 @@ export default function Home() {
               </div>
             </Fade> */}
             <Fade>
-              <div className="flex flex-col items-center justify-center mx-auto mt-40 p-20 w-full rounded    ">
+              <div className="flex flex-col items-center justify-center mx-auto  w-full rounded    ">
                 <Fade delay={200}>
                   <div className="mb-24">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]  text-xl">
-                      what does namastox have for you?
+                      What does namastox have for you?
                     </span>
                   </div>
                 </Fade>
                 <Fade cascade delay={400}>
-                  <div className="grid grid-cols-6 grid-rows-6 gap-6">
-                    <div className="col-span-2  row-span-6 w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-l-3xl rounded-r-lg">
+                  <div className="flex flex-col gap-3 w-[90vw] md:max-w-7xl  md:grid md:grid-cols-6 md:grid-rows-6 md:gap-6">
+                    <div className="col-span-2  row-span-6 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3 rounded-xl  md:rounded-l-3xl md:rounded-r-lg">
                       <div className="flex flex-col gap-5">
                         <div className="flex flex-row gap-1 items-center justify-between">
                           <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
@@ -206,7 +206,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-2 row-span-3 col-start-3 w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-lg">
+                    <div className="col-span-2 row-span-3 col-start-3 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-lg">
                       <div className="flex flex-col gap-5">
                         <div className="flex flex-row gap-1 items-center justify-between">
                           <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
@@ -240,7 +240,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-2 row-span-3 col-start-3 row-start-4 w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-lg">
+                    <div className="col-span-2 row-span-3 col-start-3 row-start-4 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-lg">
                       <div className="flex flex-col gap-5">
                         <div className="flex flex-row gap-1 items-center justify-between">
                           <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
@@ -267,7 +267,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-2 row-span-6 col-start-5 row-start-1 w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-r-3xl rounded-l-lg">
+                    <div className="col-span-2 row-span-6 col-start-5 row-start-1 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  md:rounded-r-3xl rounded-xl md:rounded-l-lg">
                       <div className="flex flex-col justify-between gap-5">
                         <div className="flex flex-row gap-1 items-center justify-between">
                           <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
@@ -318,7 +318,7 @@ export default function Home() {
 
       <div
         id="resources"
-        className="h-screen flex flex-col items-center justify-center w-full"
+        className="flex flex-col items-center  mt-64 justify-center w-full  mb-20"
       >
         <Fade cascade delay={200}>
           <div className="w-full flex flex-col items-center justify-center">
@@ -337,11 +337,11 @@ export default function Home() {
         </Fade>
       </div>
       <Fade  triggerOnce>
-      <div className=" w-full  border-t flex flex-col items-center justify-center text-neutral-600 py-3">
-        <div className="flex flex-row">
+      <div className=" w-full  border-t border-dashed flex flex-col items-center justify-center text-neutral-600 py-3">
+        <div className="flex flex-row ">
           <AnimatedTooltip items={people} />
         </div>
-        <span> © Developed by Pharmacoinformatics Group UPF</span>
+        <span className="text-center text-sm md:text-current"> © Developed by Pharmacoinformatics Group of <a href="https://phi.upf.edu/phi/" target="_blank" className="text-neutral-500  transition-colors duration-300 ease-in-out hover:text-neutral-700 font-semibold rounded-[50px] p-2 bg-neutral-100">UPF</a>  </span>
       </div>
       </Fade>
     </>
