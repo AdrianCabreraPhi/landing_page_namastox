@@ -8,6 +8,7 @@ import {
   TbBrandGithub,
   TbBrandLinkedin,
 } from "react-icons/tb";
+import { FaRegFilePdf } from "react-icons/fa";
 import { GrInstall } from "react-icons/gr";
 import namastox_portada from "./assets/screenshot_namastox.png";
 import { Fade } from "react-awesome-reveal";
@@ -61,7 +62,6 @@ const people = [
     designation: "Full Stack Developer",
     image: adrian,
   },
-
 ];
 
 export default function Home() {
@@ -71,7 +71,13 @@ export default function Home() {
     [0, 0.5, 1],
     [1, 0.5, 0]
   );
+
   const opacityHeroText = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+  const openPDF = () => {
+    window.open('/quickstarting.pdf', '_blank');
+  };
+  
   return (
     <>
       {/* home */}
@@ -174,7 +180,7 @@ export default function Home() {
                 <Fade delay={200}>
                   <div className="mb-24">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]  text-xl">
-                      What does namastox have for you?
+                      Features
                     </span>
                   </div>
                 </Fade>
@@ -325,9 +331,15 @@ export default function Home() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]  text-xl">
               Documentation
             </span>
-            <span className="text-sm text-gray-400">
-              small explanatory videos
-            </span>
+            <div onClick={openPDF} className=" mt-4 cursor-pointer group transition-all ease-in-out duration-300 hover:bg-gray-50 p-2 rounded flex flex-row gap-1 items-center">
+              <FaRegFilePdf
+                className="text-red-400 transition-all duration-300 ease-in-out group-hover:text-red-500"
+                size={30}
+              />
+              <span className="text-sm text-gray-400 transition-all duration-300 ease-in-out group-hover:text-neutral-700 ">
+                quickstarting.pdf
+              </span>
+            </div>
           </div>
         </Fade>
         <Fade cascade delay={300}>
@@ -336,13 +348,23 @@ export default function Home() {
           </div>
         </Fade>
       </div>
-      <Fade  triggerOnce>
-      <div className=" w-full  border-t border-dashed flex flex-col items-center justify-center text-neutral-600 py-3">
-        <div className="flex flex-row ">
-          <AnimatedTooltip items={people} />
+      <Fade triggerOnce>
+        <div className=" w-full  border-t border-dashed flex flex-col items-center justify-center text-neutral-600 py-3">
+          <div className="flex flex-row ">
+            <AnimatedTooltip items={people} />
+          </div>
+          <span className="text-center text-sm md:text-current">
+            {" "}
+            © Developed by Pharmacoinformatics Group of{" "}
+            <a
+              href="https://phi.upf.edu/phi/"
+              target="_blank"
+              className="text-neutral-500  transition-colors duration-300 ease-in-out hover:text-neutral-700 font-semibold rounded-[50px] p-2 bg-neutral-100"
+            >
+              UPF
+            </a>{" "}
+          </span>
         </div>
-        <span className="text-center text-sm md:text-current"> © Developed by Pharmacoinformatics Group of <a href="https://phi.upf.edu/phi/" target="_blank" className="text-neutral-500  transition-colors duration-300 ease-in-out hover:text-neutral-700 font-semibold rounded-[50px] p-2 bg-neutral-100">UPF</a>  </span>
-      </div>
       </Fade>
     </>
   );
