@@ -22,6 +22,8 @@ import { HoverEffect } from "./components/ui/card-hover-effect";
 import adrian from "./assets/adrian.jpeg";
 import manuel from "./assets/manuel.jpeg";
 import { AnimatedTooltip } from "./components/ui/animated-tooltip";
+import logo_ue from "./assets/ue.webp";
+import horizonte from "./assets/horizonte.png";
 const tutorials = [
   {
     title: "Create a new RA",
@@ -75,16 +77,16 @@ export default function Home() {
   const opacityHeroText = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const openPDF = () => {
-    window.open('/quickstarting.pdf', '_blank');
+    window.open("/quickstarting.pdf", "_blank");
   };
-  
+
   return (
     <>
       {/* home */}
       <Fade cascade delay={300}>
         <div
           id="home"
-          className="h-screen w-full flex items-center  lg:mt-24 justify-around sm:justify-between flex-col gap-2"
+          className="h-screen  w-full flex items-center  lg:mt-24 justify-around sm:justify-between flex-col gap-2"
         >
           <motion.div
             style={{ scale: scaleValueHeroText }}
@@ -186,7 +188,7 @@ export default function Home() {
                 </Fade>
                 <Fade cascade delay={400}>
                   <div className="flex flex-col gap-3 w-[90vw] md:max-w-7xl  md:grid md:grid-cols-6 md:grid-rows-6 md:gap-6">
-                    <div className="col-span-2  row-span-6 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3 rounded-xl  md:rounded-l-3xl md:rounded-r-lg">
+                    <div className="col-span-2    row-span-6 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3 rounded-xl  md:rounded-l-3xl md:rounded-r-lg">
                       <div className="flex flex-col gap-5">
                         <div className="flex flex-row gap-1 items-center justify-between">
                           <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
@@ -331,7 +333,10 @@ export default function Home() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]  text-xl">
               Documentation
             </span>
-            <div onClick={openPDF} className=" mt-4 cursor-pointer group transition-all ease-in-out duration-300 hover:bg-gray-50 p-2 rounded flex flex-row gap-1 items-center">
+            <div
+              onClick={openPDF}
+              className=" mt-4 cursor-pointer group transition-all ease-in-out duration-300 hover:bg-gray-50 p-2 rounded flex flex-row gap-1 items-center"
+            >
               <FaRegFilePdf
                 className="text-red-400 transition-all duration-300 ease-in-out group-hover:text-red-500"
                 size={30}
@@ -349,22 +354,58 @@ export default function Home() {
         </Fade>
       </div>
       <Fade triggerOnce>
-        <div className=" w-full  border-t border-dashed flex flex-col items-center justify-center text-neutral-600 py-3">
-          <div className="flex flex-row ">
-            <AnimatedTooltip items={people} />
+        <footer className=" w-full  border-t border-dashed flex flex-row items-center justify-around text-neutral-600 py-3">
+          <div className="flex flex-row gap-2">
+            <div className="flex flex-row">
+              <Image
+                className="w-[100px] rounded-l"
+                src={logo_ue}
+                alt="logo europe union"
+              />
+
+              <Image
+                className="w-[120px] rounded-r"
+                src={horizonte}
+                alt="horizonte 2020"
+              />
+            </div>
+
+            <div className="flex flex-col">
+              <span className="text-md font-bold">Acknowledgments</span>
+              <span className="text-sm text-neutral-500">
+                Namastox has been developed for the project RISKHUNT3R{" "}
+                <a
+                  className="text-neutral-600 transition-colors duration-300 ease-in-out hover:text-neutral-700"
+                  href="https://www.risk-hunt3r.eu/"
+                  target="_blank"
+                >
+                  (https://www.risk-hunt3r.eu/)
+                </a>{" "}
+              </span>
+              <span className="text-sm text-neutral-500">
+                This project has received funding from the European Union’s
+                Horizon 2020 research and innovation programme under grant
+                agreement No 964537.
+              </span>
+            </div>
           </div>
-          <span className="text-center text-sm md:text-current">
-            {" "}
-            © Developed by Pharmacoinformatics Group of{" "}
-            <a
-              href="https://phi.upf.edu/phi/"
-              target="_blank"
-              className="text-neutral-500  transition-colors duration-300 ease-in-out hover:text-neutral-700 font-semibold rounded-[50px] p-2 bg-neutral-100"
-            >
-              UPF
-            </a>{" "}
-          </span>
-        </div>
+          <div className="flex flex-col items-center">
+            <div className="flex flex-row">
+              <AnimatedTooltip items={people} />
+            </div>
+            <span className="text-center text-sm md:text-current">
+              {" "}
+              © Developed by Pharmacoinformatics Group of{" "}
+              <a
+                href="https://phi.upf.edu/phi/"
+                target="_blank"
+                className="text-neutral-500  transition-colors duration-300 ease-in-out hover:text-neutral-700 font-semibold rounded-[50px] p-2 bg-neutral-100"
+              >
+                UPF
+              </a>{" "}
+            </span>
+          </div>
+        </footer>
       </Fade>
     </>
   );
