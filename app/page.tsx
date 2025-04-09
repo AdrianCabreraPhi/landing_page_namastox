@@ -187,7 +187,7 @@ export default function Home() {
                   </div>
                 </Fade>
                 <Fade cascade delay={400}>
-                  <div className="flex flex-col gap-3 w-[90vw] md:max-w-7xl  md:grid md:grid-cols-6 md:grid-rows-6 md:gap-6">
+                  <div className="flex flex-col gap-3 w-[90vw] md:max-w-7xl  md:grid md:grid-cols-6 md:grid-rows-6 md:gap-10 bg-gray-50 p-10  rounded-xl">
                     <div className="col-span-2 row-span-6 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3 rounded-xl md:rounded-l-3xl md:rounded-r-lg flex flex-col">
                       <div className="flex flex-col">
                       <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400">
@@ -237,7 +237,10 @@ export default function Home() {
                     
                         </div>
                         <span className="text-sm/6 text-gray-600 mt-3">
-                        NAMs results can be entered in different formats and levels of detail, attaching also files. Decisions are documented to improve the ASPA workflow transparency and reproducibility.
+                        NAMs results can be entered in different formats and levels of detail, attaching also files.
+                        </span>
+                        <span className="text-sm/6 text-gray-600 mt-3">
+                        Decisions are documented to improve the ASPA workflow transparency and reproducibility.
                         </span>
                <span className="text-sm/6 text-gray-600 mt-3">
                NAM results can be consulted from a centralized repository.
