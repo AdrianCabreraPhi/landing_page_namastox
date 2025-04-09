@@ -188,126 +188,118 @@ export default function Home() {
                 </Fade>
                 <Fade cascade delay={400}>
                   <div className="flex flex-col gap-3 w-[90vw] md:max-w-7xl  md:grid md:grid-cols-6 md:grid-rows-6 md:gap-6">
-                    <div className="col-span-2    row-span-6 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3 rounded-xl  md:rounded-l-3xl md:rounded-r-lg">
-                      <div className="flex flex-col gap-5">
-                        <div className="flex flex-row gap-1 items-center justify-between">
-                          <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
-                            Step-by-step guide
-                          </span>
-                          <TbArrowGuide
-                            className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
-                            size={25}
-                          />
+                    <div className="col-span-2 row-span-6 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3 rounded-xl md:rounded-l-3xl md:rounded-r-lg flex flex-col">
+                      <div className="flex flex-col">
+                      <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400">
+                              01
+                            </span>
+                        <div className="flex flex-row gap-1 items-center justify-center border-b pb-1 border-gray-100">
+                          <div className="flex flex-row gap-2">
+                        
+                            <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
+                              Guidance
+                            </span>
+                          </div>
+                  
                         </div>
                         <span className="text-sm/6 text-gray-600 mt-3">
-                          For the user through the ASPA workflow via a simple
-                          graphical interface, suggesting the most appropriate
-                          NAMs (in vitro, in silico).
+                          NAMASTOX allows navigating the workflow step-by-step
                         </span>
-                        <div className="flex justify-center">
-                          <Image
-                            quality={100}
-                            className="w-[250px]  flex items-center justify-center"
-                            src={aspa}
-                            alt="workflow"
-                          />
-                        </div>
+                        <span className="text-sm/6 text-gray-600 mt-3">
+                          The interface shows a simplified view of the workflow
+                          including only the visited nodes and the next tasks or
+                          decisions, organized in blocks.
+                        </span>
                       </div>
+
+                      {/* La clase mt-auto empuja la imagen hacia el final del contenedor flex */}
+                      <Image
+                        quality={100}
+                        className="w-[550px] mt-[10%] "
+                        src={aspa}
+                        alt="workflow"
+                      />
                     </div>
+
                     <div className="col-span-2 row-span-3 col-start-3 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-lg">
-                      <div className="flex flex-col gap-5">
-                        <div className="flex flex-row gap-1 items-center justify-between">
-                          <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
-                            Data
+                      <div className="flex flex-col">
+                      <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400 ">
+                              02
+                            </span>
+                        <div className="flex flex-row gap-1 items-center justify-center border-b pb-1 border-gray-100">
+                          <div className="flex flex-row gap-2">
+                       
+                            <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
+                            Results
                           </span>{" "}
-                          <TbFileDatabase
-                            className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
-                            size={25}
-                          />
+                          </div>
+            
+                    
                         </div>
                         <span className="text-sm/6 text-gray-600 mt-3">
-                          A collection of all the data generated in the process
-                          for review and documentation. Reports in standard
-                          formats can be generated, facilitating the
-                          transparency of the process and its adoption by
-                          regulatory bodies.
+                        NAMs results can be entered in different formats and levels of detail, attaching also files. Decisions are documented to improve the ASPA workflow transparency and reproducibility.
                         </span>
-                        <div className="flex flex-row justify-center">
-                          <Image
-                            quality={100}
-                            className="w-[150px] "
-                            src={excel_icon}
-                            alt="excel"
-                          />
-                          <Image
-                            quality={100}
-                            className="w-[150px]  "
-                            src={word_icon}
-                            alt="word"
-                          />
-                        </div>
+               <span className="text-sm/6 text-gray-600 mt-3">
+               NAM results can be consulted from a centralized repository.
+               </span>
                       </div>
                     </div>
                     <div className="col-span-2 row-span-3 col-start-3 row-start-4 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-lg">
-                      <div className="flex flex-col gap-5">
-                        <div className="flex flex-row gap-1 items-center justify-between">
-                          <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
-                            Security
-                          </span>{" "}
-                          <GiPadlock
-                            className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
-                            size={25}
-                          />
+                      <div className="flex flex-col">
+                      <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400 ">
+                              03
+                            </span>
+                        <div className="flex flex-row gap-1 items-center justify-center border-b pb-1 border-gray-100">
+                        <div className="flex flex-row gap-2">
+                    
+                        <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
+                        Running In silico tools
+                          </span>
+                            </div>
+                 
                         </div>
                         <span className="text-sm/6 text-gray-600 mt-3">
-                          The application is protected with a login system based
-                          on Keycloak. This also allows you to control who has
-                          access to your risk assesments.
+                        In silico tools (e.g., models for predicting hazard or ADME properties) can be run directly from NAMASTOX. The results are automatically collected.
                         </span>
 
-                        <div className="flex flex-row justify-center">
-                          <Image
-                            quality={100}
-                            className="w-[200px] mt-2  "
-                            src={keycloak_icon}
-                            alt="excel"
-                          />
-                        </div>
+                        <span className="text-sm/6 text-gray-600 mt-3">
+                        QSAR Models developed in Flame can be imported directly from the interface.
+                        </span>
                       </div>
                     </div>
                     <div className="col-span-2 row-span-6 col-start-5 row-start-1 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  md:rounded-r-3xl rounded-xl md:rounded-l-lg">
                       <div className="flex flex-col justify-between gap-5">
-                        <div className="flex flex-row gap-1 items-center justify-between">
-                          <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
-                            Information
+                      <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400 ">
+                              04
+                            </span>
+                        <div className="flex flex-row gap-1 items-center justify-center border-b pb-1 border-gray-100">
+                        <div className="flex flex-row gap-2 ">
+                     
+                        <span className="titlecard text-lg font-medium tracking-tight text-gray-950 ">
+                        Reporting
                           </span>
-                          <TbInfoSmall
-                            className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
-                            size={25}
-                          />
+                            </div>
+                   
                         </div>
                         <span className="text-sm/6 text-gray-600  mt-3">
-                          The application of in silico tools and access to
-                          information resources, especially for those available
-                          online. Some in silico tools can be run directly from
-                          the interface, while others can be accessed using
-                          links.
+                        At any point of the assessment NAMASTOX can generate a report in standard formats like Word or Excel, presenting all the results in a clear and organized way.
                         </span>
                         <span className="text-sm/6 text-gray-600 mt-3">
-                          Tracking of the uncertainties identified in the
-                          process and presenting this information at decision
-                          nodes, facilitating uncertainty-aware decision-making.
+                        This report contains live links to attached files and documents.
                         </span>
 
-                        <div className="flex flex-row gap-1 items-center justify-between">
-                          <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
-                            Accessibility
+                        <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400 ">
+                              05
                           </span>
-                          <GrInstall
-                            className="text-gray-200 transition-colors duration-300 ease-in-out group-hover:text-gray-600"
-                            size={25}
-                          />
-                        </div>
+                   
+                        <div className="flex flex-row items-center justify-center border-b pb-1 border-gray-100">
+                  
+                        <span className="titlecard text-lg  font-medium tracking-tight text-gray-950">
+                        Uncertainty management
+                          </span>
+                            </div>
+                   
+                    
 
                         <span className="text-sm/6 text-gray-600 ">
                           NAMASTOX can be installed as a freely accessible tool
