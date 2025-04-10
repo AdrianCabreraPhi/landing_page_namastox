@@ -24,6 +24,7 @@ import manuel from "./assets/manuel.jpeg";
 import { AnimatedTooltip } from "./components/ui/animated-tooltip";
 import logo_ue from "./assets/ue.webp";
 import horizonte from "./assets/horizonte.png";
+
 const tutorials = [
   {
     title: "Create a new RA",
@@ -86,7 +87,7 @@ export default function Home() {
       <Fade cascade delay={300}>
         <div
           id="home"
-          className="h-screen  w-full flex items-center  lg:mt-24 justify-around sm:justify-between flex-col gap-2"
+          className="h-screen    w-full flex items-center  lg:mt-24 justify-around sm:justify-between flex-col gap-2"
         >
           <motion.div
             style={{ scale: scaleValueHeroText }}
@@ -95,10 +96,8 @@ export default function Home() {
             <span className="text-6xl md:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
               Namastox
             </span>
-            <span className="text-[#7E7E7E] w-full text-center md:w-4/6">
-              Software tool for supporting the implementation of New Assessment
-              Methods (NAMs) within a New Generation Risk Assessment (NGRA)
-              framework.
+            <span className="text-[#7E7E7E] w-full text-center ">
+              A computational tool supporting the use of NGRA workflows
             </span>
             <div className="flex flex-row items-center gap-4">
               <a
@@ -129,54 +128,98 @@ export default function Home() {
             style={{ scale: scaleValueHeroText, opacity: opacityHeroText }}
             className="preview-software w-full flex items-center justify-center px-4"
           >
-            <Image
+            <video
+              width={1500}
+              height={300}
+              className="rounded shadow-2xl shadow-[#4E4384]"
+              autoPlay
+              muted
+              loop
+            >
+              <source src="/namastox_video.mp4" type="video/mp4" />
+            </video>
+
+            {/* <Image
               quality={100}
               className="w-[100vw] transform  lg:w-[60vw] rounded-xl shadow-2xl shadow-[#4E4384]"
               src={namastox_portada}
               alt="software"
-            />
+            /> */}
           </motion.div>
         </div>
       </Fade>
-      <div id="about" className=" flex flex-row w-full">
+            <Fade>
+      <div className="more-about-namastox mask w-full flex flex-col bg-[url('/background-section.png')] items-center bg-cover rounded  bg-no-repeat  justify-center main gap-4 px-5 pt-64 pb-64 ">
+        <Fade>
+        <section className="card-information max-w-7xl transition-all duration-300 ease-in-out hover:shadow-2xl bg-white flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.12)]   p-10 min-h-96">
+          <span className=" text-md md:text-2xl mb-5">
+            <a href="https://namastox.upf.edu" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
+              NAMASTOX
+            </a>
+            <span className="text-[#7E7E7E]">
+              {" "}
+              is an online software with a web-based graphical interface,
+              developed for supporting the application of the ASPA workflow in
+              practice.
+            </span>
+          </span>
+          <hr className="border-neutral-100 mb-5" />
+
+          <span className="text-md md:text-2xl mb-5">
+            {" "}
+            <span className="text-[#7E7E7E]">The</span>{" "}
+            <a href="https://www.risk-hunt3r.eu/aspa/" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
+              ASPA workflow{" "}
+            </a>{" "}
+            <span className="text-[#7E7E7E]">developed by the</span>{" "}
+            <a href="https://aspis-cluster.eu/" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
+              ASPIS cluster,
+            </a>{" "}
+            <span className="text-[#7E7E7E]">
+              is the interactive NGRA (New Generation Risk Assessment) workflow
+              that guides users through all steps and decisions of the risk
+              assessment process.
+            </span>{" "}
+          </span>
+          <hr className="border-neutral-100 mb-5" />
+
+          <span className="text-md md:text-2xl text-[#7E7E7E]">
+            {" "}
+            <a href="https://namastox.upf.edu" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
+              NAMASTOX
+            </a>{" "}
+            was developed by one of the ASPIS cluster projects{" "}
+            <a href="https://phi.upf.edu/phi/index.php/projects/risk-hunt3r/" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
+              (RISK-HUNT3R)
+            </a>{" "}
+            specifically aiming to support the ASPA workflow and facilitate its
+            application.
+          </span>
+        </section>
+        </Fade>
+<Fade>
+<section className="card-information min-h-96 flex max-w-7xl transition-all duration-300 ease-in-out flex-col hover:shadow-2xl bg-white  rounded shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-10">
+          <span className="text-md md:text-2xl text-[#7E7E7E] mb-5">
+            <a href="https://namastox.upf.edu" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
+              NAMASTOX
+            </a>{" "}
+            is open source, accesible <a href="https://namastox.upf.edu" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69] " target="_blank">here</a> , and can be installed in a private
+            server, or locally on a desktop computer, allowing its application
+            to sensitive data.
+          </span>
+          <hr className="border-neutral-100 mb-5" />
+          <span className="text-md md:text-2xl mb-5 text-[#7E7E7E] ">
+            It works in most operative systems and environments, from an environment
+            to a Windows laptop. Moreover, risk assessments conducted with <a href="https://namastox.upf.edu" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]"> NAMASTOX</a>     can be easily exported and shared.
+          </span>
+        </section>
+</Fade>
+ 
+      </div>
+      </Fade>
+      <div id="about" className=" flex flex-row w-full mt-32">
         <div className="main flex flex-row w-full justify-around">
           <div className="flex flex-col">
-            {/* <span className="text-xl md:text-4xl mb-10 text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
-              About Namastox
-            </span> */}
-
-            {/* <Fade bottom delay={200}>
-              <div className="md:ml-10 mb-10 transition-all duration-300 ease-in-out border-l-4 pl-2 hover:pl-4 border-gray-300  hover:border-[#4E4384]">
-                <span className="text-sm  md:text-3xl leading-relaxed text-left ">
-                  NAMASTOX is a computational tool for supporting the
-                  implementation of New Assessment Methods (NAMs) within a New
-                  Generation Risk Assessment (NGRA) framework.
-                </span>
-              </div>
-            </Fade> */}
-            {/* <Fade bottom delay={400}>
-              <div className="md:ml-10  mb-10 transition-all duration-300 ease-in-out border-l-4 pl-2 hover:pl-4 border-gray-300  hover:border-[#4E4384]">
-                <span className="text-sm md:text-3xl leading-relaxed text-left">
-                  The application of NGRA can be complex, involve many steps,
-                  and generate many pieces of evidence that are difficult to
-                  integrate. Adopting this methodology would be largely
-                  facilitated by using a stable, well-designed workflow, guiding
-                  the user on the ordered and systematic application of these
-                  steps. An example of such workflow is the ASPA workflow
-                  currently being developed by the ASPIS cluster.
-                </span>
-              </div>
-            </Fade> */}
-            {/* 
-            <Fade bottom delay={600}>
-              <div className="md:ml-10 mb-10 transition-all duration-300 ease-in-out border-l-4 pl-2 hover:pl-4 border-gray-300  hover:border-[#4E4384]">
-                <span className="text-sm md:text-3xl leading-relaxed  text-left">
-                  NAMASTOX was developed by one of the ASPIS cluster projects
-                  (RISK-HUNT3R) specifically aiming to support the ASPA workflow
-                  and facilitate its application in practice.
-                </span>
-              </div>
-            </Fade> */}
             <Fade>
               <div className="flex flex-col items-center justify-center mx-auto  w-full rounded    ">
                 <Fade delay={200}>
@@ -190,22 +233,20 @@ export default function Home() {
                   <div className="flex flex-col gap-3 w-[90vw] md:max-w-7xl  md:grid md:grid-cols-6 md:grid-rows-6 md:gap-10 bg-gray-50 p-10  rounded-xl">
                     <div className="col-span-2 row-span-6 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3 rounded-xl md:rounded-l-3xl md:rounded-r-lg flex flex-col">
                       <div className="flex flex-col">
-                      <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400">
-                              01
-                            </span>
+                        <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400">
+                          01
+                        </span>
                         <div className="flex flex-row gap-1 items-center justify-center border-b pb-1 border-gray-100">
                           <div className="flex flex-row gap-2">
-                        
                             <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
                               Guidance
                             </span>
                           </div>
-                  
                         </div>
-                        <span className="text-sm/6 text-gray-600 mt-3">
+                        <span className="text-md text-gray-600 mt-3">
                           NAMASTOX allows navigating the workflow step-by-step
                         </span>
-                        <span className="text-sm/6 text-gray-600 mt-3">
+                        <span className="text-md text-gray-600 mt-3">
                           The interface shows a simplified view of the workflow
                           including only the visited nodes and the next tasks or
                           decisions, organized in blocks.
@@ -223,88 +264,88 @@ export default function Home() {
 
                     <div className="col-span-2 row-span-3 col-start-3 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-lg">
                       <div className="flex flex-col">
-                      <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400 ">
-                              02
-                            </span>
+                        <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400 ">
+                          02
+                        </span>
                         <div className="flex flex-row gap-1 items-center justify-center border-b pb-1 border-gray-100">
                           <div className="flex flex-row gap-2">
-                       
                             <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
-                            Results
-                          </span>{" "}
+                              Results
+                            </span>{" "}
                           </div>
-            
-                    
                         </div>
-                        <span className="text-sm/6 text-gray-600 mt-3">
-                        NAMs results can be entered in different formats and levels of detail, attaching also files.
+                        <span className="text-md text-gray-600 mt-3">
+                          NAMs results can be entered in different formats and
+                          levels of detail, attaching also files.
                         </span>
-                        <span className="text-sm/6 text-gray-600 mt-3">
-                        Decisions are documented to improve the ASPA workflow transparency and reproducibility.
+                        <span className="text-md text-gray-600 mt-3">
+                          Decisions are documented to improve the ASPA workflow
+                          transparency and reproducibility.
                         </span>
-               <span className="text-sm/6 text-gray-600 mt-3">
-               NAM results can be consulted from a centralized repository.
-               </span>
+                        <span className="text-md text-gray-600 mt-3">
+                          NAM results can be consulted from a centralized
+                          repository.
+                        </span>
                       </div>
                     </div>
                     <div className="col-span-2 row-span-3 col-start-3 row-start-4 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  rounded-lg">
                       <div className="flex flex-col">
-                      <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400 ">
-                              03
-                            </span>
+                        <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400 ">
+                          03
+                        </span>
                         <div className="flex flex-row gap-1 items-center justify-center border-b pb-1 border-gray-100">
-                        <div className="flex flex-row gap-2">
-                    
-                        <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
-                        Running In silico tools
-                          </span>
-                            </div>
-                 
+                          <div className="flex flex-row gap-2">
+                            <span className="titlecard text-lg font-medium tracking-tight text-gray-950">
+                              Running In silico tools
+                            </span>
+                          </div>
                         </div>
-                        <span className="text-sm/6 text-gray-600 mt-3">
-                        In silico tools (e.g., models for predicting hazard or ADME properties) can be run directly from NAMASTOX. The results are automatically collected.
+                        <span className="text-md text-gray-600 mt-3">
+                          In silico tools (e.g., models for predicting hazard or
+                          ADME properties) can be run directly from NAMASTOX.
+                          The results are automatically collected.
                         </span>
 
-                        <span className="text-sm/6 text-gray-600 mt-3">
-                        QSAR Models developed in Flame can be imported directly from the interface.
+                        <span className="text-md text-gray-600 mt-3">
+                          QSAR Models developed in Flame can be imported
+                          directly from the interface.
                         </span>
                       </div>
                     </div>
                     <div className="col-span-2 row-span-6 col-start-5 row-start-1 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3  md:rounded-r-3xl rounded-xl md:rounded-l-lg">
                       <div className="flex flex-col justify-between gap-5">
-                      <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400 ">
-                              04
-                            </span>
-                        <div className="flex flex-row gap-1 items-center justify-center border-b pb-1 border-gray-100">
-                        <div className="flex flex-row gap-2 ">
-                     
-                        <span className="titlecard text-lg font-medium tracking-tight text-gray-950 ">
-                        Reporting
-                          </span>
-                            </div>
-                   
-                        </div>
-                        <span className="text-sm/6 text-gray-600  mt-3">
-                        At any point of the assessment NAMASTOX can generate a report in standard formats like Word or Excel, presenting all the results in a clear and organized way.
+                        <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400 ">
+                          04
                         </span>
-                        <span className="text-sm/6 text-gray-600 mt-3">
-                        This report contains live links to attached files and documents.
+                        <div className="flex flex-row gap-1 items-center justify-center border-b pb-1 border-gray-100">
+                          <div className="flex flex-row gap-2 ">
+                            <span className="titlecard text-lg font-medium tracking-tight text-gray-950 ">
+                              Reporting
+                            </span>
+                          </div>
+                        </div>
+                        <span className="text-md text-gray-600  mt-3">
+                          At any point of the assessment NAMASTOX can generate a
+                          report in standard formats like Word or Excel,
+                          presenting all the results in a clear and organized
+                          way.
+                        </span>
+                        <span className="text-md text-gray-600 mt-3">
+                          This report contains live links to attached files and
+                          documents.
                         </span>
 
                         <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400 ">
-                              05
-                          </span>
-                   
-                        <div className="flex flex-row items-center justify-center border-b pb-1 border-gray-100">
-                  
-                        <span className="titlecard text-lg  font-medium tracking-tight text-gray-950">
-                        Uncertainty management
-                          </span>
-                            </div>
-                   
-                    
+                          05
+                        </span>
 
-                        <span className="text-sm/6 text-gray-600 ">
+                        <div className="flex flex-row items-center justify-center border-b pb-1 border-gray-100">
+                          <span className="titlecard text-lg  font-medium tracking-tight text-gray-950">
+                            Uncertainty management
+                          </span>
+                        </div>
+
+                        <span className="text-md text-gray-600 ">
                           NAMASTOX can be installed as a freely accessible tool
                           on the Internet, in a private server, or locally on a
                           desktop computer
