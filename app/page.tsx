@@ -152,7 +152,7 @@ export default function Home() {
       <div className="more-about-namastox mask w-full flex flex-col bg-[url('/background-section.png')] items-center bg-cover rounded  bg-no-repeat  justify-center main gap-4 px-5 pt-64 pb-64 ">
         <Fade>
         <section className="card-information max-w-7xl transition-all duration-300 ease-in-out hover:shadow-2xl bg-white flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.12)]   p-10 min-h-96">
-          <span className=" text-md md:text-2xl mb-5">
+          <span className="text-balance text-md md:text-2xl mb-5">
             <a href="https://namastox.upf.edu" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
               NAMASTOX
             </a>
@@ -165,7 +165,7 @@ export default function Home() {
           </span>
           <hr className="border-neutral-100 mb-5" />
 
-          <span className="text-md md:text-2xl mb-5">
+          <span className="text-md text-balance md:text-2xl mb-5">
             {" "}
             <span className="text-[#7E7E7E]">The</span>{" "}
             <a href="https://www.risk-hunt3r.eu/aspa/" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
@@ -183,7 +183,7 @@ export default function Home() {
           </span>
           <hr className="border-neutral-100 mb-5" />
 
-          <span className="text-md md:text-2xl text-[#7E7E7E]">
+          <span className="text-md md:text-2xl text-balance text-[#7E7E7E]">
             {" "}
             <a href="https://namastox.upf.edu" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
               NAMASTOX
@@ -199,7 +199,7 @@ export default function Home() {
         </Fade>
 <Fade>
 <section className="card-information min-h-96 flex max-w-7xl transition-all duration-300 ease-in-out flex-col hover:shadow-2xl bg-white  rounded shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-10">
-          <span className="text-md md:text-2xl text-[#7E7E7E] mb-5">
+          <span className="text-md   text-balance md:text-2xl text-[#7E7E7E] mb-5">
             <a href="https://namastox.upf.edu" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
               NAMASTOX
             </a>{" "}
@@ -208,7 +208,7 @@ export default function Home() {
             to sensitive data.
           </span>
           <hr className="border-neutral-100 mb-5" />
-          <span className="text-md md:text-2xl mb-5 text-[#7E7E7E] ">
+          <span className="text-md text-balance  md:text-2xl mb-5 text-[#7E7E7E] ">
             It works in most operative systems and environments, from an AWS cloud environment
             to a Windows laptop. Moreover, risk assessments conducted with <a href="https://namastox.upf.edu" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]"> NAMASTOX</a>     can be easily exported and shared.
           </span>
@@ -390,9 +390,9 @@ export default function Home() {
         </Fade>
       </div>
       <Fade triggerOnce>
-        <footer className=" w-full  border-t border-dashed flex flex-row items-center justify-around text-neutral-600 py-3">
+        <footer className=" w-full  border-t border-dashed flex  flex-row items-center justify-around text-neutral-600 py-3">
           <div className="flex flex-row gap-2">
-            <div className="flex flex-row">
+            <div className="flex flex-row flex-wrap">
               <Image
                 className="w-[100px] rounded-l"
                 src={logo_ue}
