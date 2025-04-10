@@ -99,7 +99,7 @@ export default function Home() {
             <span className="text-[#7E7E7E] w-full text-center ">
               A computational tool supporting the use of NGRA workflows
             </span>
-            <div className="flex flex-row items-center gap-4">
+            <div className="flex flex-row items-center gap-4 mb-[20vh]">
               <a
                 href="https://github.com/phi-grib/namastox"
                 target="_blank"
@@ -129,9 +129,9 @@ export default function Home() {
             className="preview-software w-full flex items-center justify-center px-4"
           >
             <video
-              width={1500}
-              height={300}
-              className="rounded shadow-2xl shadow-[#4E4384]"
+        
+
+              className="w rounded shadow-2xl shadow-[#4E4384]"
               autoPlay
               muted
               loop
@@ -209,7 +209,7 @@ export default function Home() {
           </span>
           <hr className="border-neutral-100 mb-5" />
           <span className="text-md md:text-2xl mb-5 text-[#7E7E7E] ">
-            It works in most operative systems and environments, from an environment
+            It works in most operative systems and environments, from an AWS cloud environment
             to a Windows laptop. Moreover, risk assessments conducted with <a href="https://namastox.upf.edu" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]"> NAMASTOX</a>     can be easily exported and shared.
           </span>
         </section>
