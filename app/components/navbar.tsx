@@ -4,14 +4,13 @@ import Image from "next/image";
 import aspis_logo from "../assets/aspis_logo.png";
 import risk_hunter_logo from "../assets/risk_hunter_logo.png";
 import "./navbar.css";
-import namastox_logo from "../assets/logo-namastox.png"
+import namastox_logo from "../assets/namastox_logo.png"
 export default function Navbar() {
   return (
     <div className=" z-50 navbar fixed w-full">
-      <div className="container mx-auto flex flex-row items-center justify-between">
+      <div className="flex mx-3 flex-row items-center justify-between">
         <nav className="flex flex-row items-center p-4 gap-3">
-        {/* <Image className="w-[75px]  partner-image" src={namastox_logo} alt="namastox logo" /> */}
-
+        {/* <Image src={namastox_logo} alt="logo" className="w-[100px] " /> */}
           <Link href="#about">
             <span className="text-xl text-gray-400 transition-colors duration-200 ease-in-out hover:text-[#4E4384]">
               About

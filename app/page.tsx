@@ -2,29 +2,19 @@
 import Image from "next/image";
 import {
   TbBrowserShare,
-  TbArrowGuide,
-  TbFileDatabase,
-  TbInfoSmall,
   TbBrandGithub,
-  TbBrandLinkedin,
 } from "react-icons/tb";
 import { FaRegFilePdf } from "react-icons/fa";
-import { GrInstall } from "react-icons/gr";
 import namastox_portada from "./assets/screenshot_namastox.png";
 import { Fade } from "react-awesome-reveal";
 import { motion, useScroll, useTransform } from "framer-motion";
 import aspa from "./assets/aspa.png";
-import excel_icon from "./assets/excel_icon.svg";
-import word_icon from "./assets/word_icon.svg";
-import keycloak_icon from "./assets/keycloak_icon.png";
-import { GiPadlock } from "react-icons/gi";
 import { HoverEffect } from "./components/ui/card-hover-effect";
 import adrian from "./assets/adrian.jpeg";
 import manuel from "./assets/manuel.jpeg";
 import { AnimatedTooltip } from "./components/ui/animated-tooltip";
-import logo_ue from "./assets/ue.webp";
 import horizonte from "./assets/horizonte.png";
-
+import namastox_logo from "./assets/namastox_logo.png"
 const tutorials = [
   {
     title: "Create a new RA",
@@ -93,8 +83,8 @@ export default function Home() {
             style={{ scale: scaleValueHeroText }}
             className="flex flex-col hero-text items-center  relative gap-2"
           >
-            <span className="text-6xl md:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
-              Namastox
+            <span className="text-6xl flex flex-row md:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+              Namastox  
             </span>
             <span className="text-[#7E7E7E] w-full text-center ">
               A computational tool supporting the use of NGRA workflows
@@ -123,15 +113,14 @@ export default function Home() {
                 </div>
               </a>
             </div>
+      
           </motion.div>
           <motion.div
             style={{ scale: scaleValueHeroText, opacity: opacityHeroText }}
             className="preview-software w-full flex items-center justify-center px-4"
           >
             <video
-        
-
-              className="w rounded shadow-2xl shadow-[#4E4384]"
+              className=" rounded shadow-2xl shadow-[#4E4384]"
               autoPlay
               muted
               loop
@@ -149,9 +138,10 @@ export default function Home() {
         </div>
       </Fade>
             <Fade>
-      <div className="more-about-namastox mask w-full flex flex-col bg-[url('/background-section.png')] items-center bg-cover rounded  bg-no-repeat  justify-center main gap-4 px-5 pt-64 pb-64 ">
+      <div className="more-about-namastox mask w-full flex flex-col  items-center  rounded    justify-center main gap-4 px-5 pt-64 pb-32 ">
         <Fade>
-        <section className="card-information max-w-7xl transition-all duration-300 ease-in-out hover:shadow-2xl bg-white flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.12)]   p-10 min-h-96">
+     
+        <section className="card-information max-w-7xl transition-all    duration-300 ease-in-out hover:shadow-2xl bg-white flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.12)]   p-10 min-h-96">
           <span className="text-balance text-md md:text-2xl mb-5">
             <a href="https://namastox.upf.edu" target="_blank" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]">
               NAMASTOX
@@ -217,20 +207,20 @@ export default function Home() {
  
       </div>
       </Fade>
-      <div id="about" className=" flex flex-row w-full mt-32">
+      <div id="about" className="flex flex-row w-full bg-gray-50  mt-32">
         <div className="main flex flex-row w-full justify-around">
           <div className="flex flex-col">
             <Fade>
               <div className="flex flex-col items-center justify-center mx-auto  w-full rounded    ">
                 <Fade delay={200}>
-                  <div className="mb-24">
+                  <div className="mb-24 mt-10">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]  text-xl">
                       Features
                     </span>
                   </div>
                 </Fade>
                 <Fade cascade delay={400}>
-                  <div className="flex flex-col gap-3 w-[90vw] md:max-w-7xl  md:grid md:grid-cols-6 md:grid-rows-6 md:gap-10 bg-gray-50 p-10  rounded-xl">
+                  <div className="flex flex-col gap-3 w-[90vw] md:max-w-7xl  md:grid md:grid-cols-6 md:grid-rows-6 md:gap-10  p-10  rounded-xl">
                     <div className="col-span-2 row-span-6 md:w-[350px] 2xl:w-[400px] transition-all duration-300 ease-in-out group hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] border bg-white pt-3 px-3 pb-3 rounded-xl md:rounded-l-3xl md:rounded-r-lg flex flex-col">
                       <div className="flex flex-col">
                         <span className="text-sm text-gray-300 transition-colors duration-300 ease-in-out group-hover:text-gray-400">
@@ -390,22 +380,13 @@ export default function Home() {
         </Fade>
       </div>
       <Fade triggerOnce>
-        <footer className=" w-full  border-t border-dashed flex  flex-row items-center justify-around text-neutral-600 py-3">
+        <footer className=" w-full  border-t border-dashed flex flex-col md:flex-row items-center justify-around text-neutral-600 py-3">
           <div className="flex flex-row gap-2">
-            <div className="flex flex-row flex-wrap">
-              <Image
-                className="w-[100px] rounded-l"
-                src={logo_ue}
-                alt="logo europe union"
-              />
-
-              <Image
-                className="w-[120px] rounded-r"
+          <Image
+                className="w-[250px]  rounded-r"
                 src={horizonte}
                 alt="horizonte 2020"
               />
-            </div>
-
             <div className="flex flex-col">
               <span className="text-md font-bold">Acknowledgments</span>
               <span className="text-sm text-neutral-500">
@@ -418,7 +399,7 @@ export default function Home() {
                   (https://www.risk-hunt3r.eu/)
                 </a>{" "}
               </span>
-              <span className="text-sm text-neutral-500">
+              <span className="text-sm text-balance">
                 This project has received funding from the European Union’s
                 Horizon 2020 research and innovation programme under grant
                 agreement No 964537.
@@ -426,10 +407,10 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <div className="flex flex-row">
+            <div className="md:flex hidden md:visible flex-row">
               <AnimatedTooltip items={people} />
             </div>
-            <span className="text-center text-sm md:text-current">
+            <span className=" md:text-center text-sm md:text-current mt-2 md:mt-0">
               {" "}
               © Developed by Pharmacoinformatics Group of{" "}
               <a
