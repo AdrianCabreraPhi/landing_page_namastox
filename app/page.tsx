@@ -15,6 +15,8 @@ import manuel from "./assets/manuel.jpeg";
 import { AnimatedTooltip } from "./components/ui/animated-tooltip";
 import horizonte from "./assets/horizonte.png";
 import namastox_logo from "./assets/namastox_logo.png"
+import TutorialsGuideComponent from "./components/TutorialsGuideComponent"
+import guide from "./storage/ListTutorials"
 const tutorials = [
   {
     title: "Introductory video",
@@ -46,6 +48,10 @@ const tutorials = [
   },
 ];
 
+
+
+
+
 const people = [
   {
     id: 1,
@@ -71,9 +77,6 @@ export default function Home() {
 
   const opacityHeroText = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-  const openPDF = () => {
-    window.open("/quickstarting.pdf", "_blank");
-  };
 
   return (
     <>
@@ -350,15 +353,24 @@ export default function Home() {
         className="flex flex-col items-center  pt-64 justify-center w-full  mb-64"
       >
         <Fade cascade delay={200}>
-          <div className="w-full flex flex-col items-center justify-center">
+          <div className="w-full flex flex-col items-center justify-center  mb-10">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69]  text-xl">
               Documentation
             </span>
-            <div
-              onClick={openPDF}
-              className=" mt-4 cursor-pointer group transition-all ease-in-out duration-300 hover:bg-gray-50 p-2 rounded flex flex-row gap-1 items-center"
+          </div>
+        </Fade>
+
+           <TutorialsGuideComponent guide={guide} />
+
+           <div
+                onClick={() => {
+                  window.open("/quickstarting.pdf", "_blank");
+                }}
+              className=" justify-center mt-10 cursor-pointer group transition-all ease-in-out duration-300 hover:bg-gray-50 p-2 rounded flex flex-row gap-1 items-center"
             >
+              <span className="text-sm text-gray-400 transition-all duration-300 ease-in-out group-hover:text-neutral-700 ">Available on</span>
               <FaRegFilePdf
+          
                 className="text-red-400 transition-all duration-300 ease-in-out group-hover:text-red-500"
                 size={30}
               />
@@ -366,13 +378,7 @@ export default function Home() {
                 quickstarting.pdf
               </span>
             </div>
-          </div>
-        </Fade>
-        <Fade cascade delay={300}>
-          <div className="max-w-6xl mx-auto px-8">
-            <HoverEffect items={tutorials} />
-          </div>
-        </Fade>
+    
       </div>
       <Fade triggerOnce>
         <footer className=" w-full  border-t border-dashed flex flex-col md:flex-row items-center justify-around text-neutral-600 py-3">
