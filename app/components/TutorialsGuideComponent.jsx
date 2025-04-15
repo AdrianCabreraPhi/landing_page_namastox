@@ -12,10 +12,10 @@ function TutorialsGuideComponent({ guide }) {
   }
   
   return (
-    <div className="rounded-md border border-gray-200 gap-12 p-10 flex flex-col w-2/3  overflow-hidden">
+    <div className="rounded-md border hover:border-neutral-100 transition-all duration-300 ease-in-out border-neutral-50 gap-12 p-10 flex flex-col w-3/4  overflow-hidden">
   
 
-      <div className="flex flex-row gap-10 justify-center">
+      <div className="flex flex-row flex-wrap gap-10 justify-center">
         {guide.map((element, index) => (
           <button
             onClick={() => setActive(index)}
@@ -26,13 +26,20 @@ function TutorialsGuideComponent({ guide }) {
                 active == index ? "text-gray-900" : "text-gray-300"
               } self-start  transition-all duration-300 ease-in-out group-hover:text-gray-900`}
             >
-              {index}
+              {index > 0 && index}
             </span>{" "}
             {element.title}
           </button>
         ))}
       </div>
-      <div className="flex flex-row items-center justify-around">
+      <div className="flex flex-row items-center gap-5 justify-center">
+
+      <button onClick={()=> {(active-1) >= 0 ? setActive(active-1) : ""}}  className="group cursor-pointer">
+        <span className="text-4xl duration-300 ease-in-out transition-all group-hover:text-black text-gray-200">
+          {"<"}
+        </span>
+        </button>
+
         <video
           quality={100}
           className="rounded  shadow-md "
@@ -44,20 +51,14 @@ function TutorialsGuideComponent({ guide }) {
           height={365} 
         ></video>
 
-        <div className="steps flex flex-col gap-5 rounded border w-3xl min-w-[48rem] border-gray-100 h-96 overflow-y-auto p-7 ">
-          {guide[active].steps.map((step,index) => (
-            <span
-              key={index}
-              className="step p-2 transition-all duration-300 ease-in-out hover:bg-neutral-50 rounded"
-            >
-              {step}
-            </span>
-          ))}
-        </div>
+        <button onClick={()=> {(active+1) < guide.length ? setActive(active+1) : ""}} className="group cursor-pointer">
+        <span className="text-4xl duration-300 ease-in-out transition-all group-hover:text-black text-gray-200">
+          {">"}
+        </span>
+        </button>
+
       </div>
-      <div className="flex flex-row items-center justify-center border-t border-dashed border-neutral-100">
-         <button onClick={nextVideo} className="text-gray-500 mt-4 transition-all duration-300 cursor-pointer ease-in-out hover:text-black">Next</button>
-        </div>
+
     </div>
   );
 }
