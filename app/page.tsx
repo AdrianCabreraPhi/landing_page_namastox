@@ -66,7 +66,7 @@ export default function Home() {
             className="preview-software w-full flex items-center justify-center px-4"
           >
             <video
-              className=" rounded shadow-2xl shadow-[#4E4384]"
+              className=" rounded "
               autoPlay
               muted
               loop
@@ -80,7 +80,7 @@ export default function Home() {
         <div className="more-about-namastox mask w-full flex flex-col  items-center  rounded    justify-center main gap-4 px-5 pt-64 pb-32 ">
           <Fade>
             <section className="card-information max-w-7xl transition-all    duration-300 ease-in-out hover:shadow-2xl bg-white flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.12)]   p-10 min-h-96">
-              <span className="text-balance text-md md:text-2xl/relaxed mb-5">
+              <span className="text-balance text-md md:text-xl/relaxed mb-5">
                 <a
                   href="https://namastox.upf.edu"
                   target="_blank"
@@ -97,7 +97,7 @@ export default function Home() {
               </span>
               <hr className="border-neutral-100 mb-5" />
 
-              <span className="text-md text-balance md:text-2xl/relaxed mb-5">
+              <span className="text-md text-balance md:text-xl/relaxed mb-5">
                 {" "}
                 <span className="text-[#7E7E7E]">The</span>{" "}
                 <a
@@ -123,7 +123,7 @@ export default function Home() {
               </span>
               <hr className="border-neutral-100 mb-5" />
 
-              <span className="text-md md:text-2xl/relaxed text-balance text-[#7E7E7E]">
+              <span className="text-md md:text-xl/relaxed text-balance text-[#7E7E7E]">
                 {" "}
                 <a
                   href="https://namastox.upf.edu"
@@ -147,7 +147,7 @@ export default function Home() {
           </Fade>
           <Fade>
             <section className="card-information min-h-96 flex max-w-7xl transition-all duration-300 ease-in-out flex-col hover:shadow-2xl bg-white  rounded shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-10">
-              <span className="text-md   text-balance md:text-2xl/relaxed text-[#7E7E7E] mb-5">
+              <span className="text-md   text-balance md:text-xl/relaxed text-[#7E7E7E] mb-5">
                 <a
                   href="https://namastox.upf.edu"
                   target="_blank"
@@ -167,7 +167,7 @@ export default function Home() {
                 desktop computer, allowing its application to sensitive data.
               </span>
               <hr className="border-neutral-100 mb-5" />
-              <span className="text-md text-balance  md:text-2xl/relaxed mb-5 text-[#7E7E7E] ">
+              <span className="text-md text-balance  md:text-xl/relaxed mb-5 text-[#7E7E7E] ">
                 It works in most operative systems and environments, from an AWS
                 cloud environment to a Windows laptop. Moreover, risk
                 assessments conducted with{" "}
