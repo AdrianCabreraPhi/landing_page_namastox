@@ -66,7 +66,7 @@ export default function Home() {
             className="preview-software w-full flex items-center justify-center px-4"
           >
             <video
-              className=" rounded "
+              className=" rounded shadow-2xl shadow-purple-950"
               autoPlay
               muted
               loop
