@@ -24,11 +24,11 @@ export default function Home() {
       <Fade cascade delay={300}>
         <div
           id="home"
-          className="h-screen    w-full flex items-center  lg:mt-24 justify-around sm:justify-between flex-col gap-2"
+          className="h-screen flex-wrap   w-full flex items-center justify-around   flex-col  md:flex-row gap-2"
         >
           <motion.div
             style={{ scale: scaleValueHeroText }}
-            className="flex flex-col hero-text items-center  relative gap-2"
+            className="flex flex-col hero-text items-center mt-20 gap-2"
           >
             <span className="text-6xl flex flex-row md:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-[#4E4384] to-[#CE5D69] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
               Namastox
@@ -63,10 +63,10 @@ export default function Home() {
           </motion.div>
           <motion.div
             style={{ scale: scaleValueHeroText, opacity: opacityHeroText }}
-            className="preview-software w-full flex items-center justify-center px-4"
+            className="preview-software    flex items-center justify-center"
           >
             <video
-              className=" rounded shadow-2xl shadow-purple-950"
+              className="w-[1000px]   rounded shadow-2xl shadow-[#4E4384]"
               autoPlay
               muted
               loop
