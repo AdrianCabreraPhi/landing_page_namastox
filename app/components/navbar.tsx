@@ -4,10 +4,10 @@ import Image from "next/image";
 import aspis_logo from "../assets/aspis_logo.png";
 import risk_hunter_logo from "../assets/risk_hunter_logo.png";
 import "./navbar.css";
-import namastox_logo from "../assets/namastox_logo.png"
+import { motion } from "framer-motion";
 export default function Navbar() {
   return (
-    <div className=" z-50 navbar fixed w-full">
+    <motion.div transition={{delay:3}} initial={{opacity:0}} animate={{opacity:100}}  className=" z-50 navbar fixed w-full">
       <div className="flex mx-3 flex-row items-center justify-between">
         <nav className="flex flex-row items-center p-4 gap-3">
        {/* <Image src={namastox_logo} alt="logo" className="w-[100px] " /> */}
@@ -35,6 +35,6 @@ export default function Navbar() {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
