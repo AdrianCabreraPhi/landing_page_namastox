@@ -7,6 +7,7 @@ import aspa from "./assets/aspa.png";
 import horizonte from "./assets/horizonte.png";
 import TutorialsGuideComponent from "./components/TutorialsGuideComponent";
 import guide from "./storage/ListTutorials";
+import { Fade } from "react-awesome-reveal";
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const scaleValueHeroText = useTransform(
@@ -109,8 +110,8 @@ export default function Home() {
 
 
       <div className="more-about-namastox mask w-full flex flex-col  items-center  rounded    justify-center main gap-4 px-5 pt-64 pb-32 ">
-
-        <section className="card-information max-w-7xl transition-all    duration-300 ease-in-out hover:shadow-2xl bg-white flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.12)]   p-10 min-h-96">
+      <Fade>
+      <section className="card-information max-w-7xl transition-all    duration-300 ease-in-out hover:shadow-2xl bg-white flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.12)]   p-10 min-h-96">
           <span className="text-balance text-md md:text-xl/relaxed mb-5">
             <a
               href="https://namastox.upf.edu"
@@ -176,8 +177,11 @@ export default function Home() {
           </span>
         </section>
 
+      </Fade>
+      
 
-        <section className="card-information min-h-96 flex max-w-7xl transition-all duration-300 ease-in-out flex-col hover:shadow-2xl bg-white  rounded shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-10">
+      <Fade>
+      <section className="card-information min-h-96 flex max-w-7xl transition-all duration-300 ease-in-out flex-col hover:shadow-2xl bg-white  rounded shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-10">
           <span className="text-md   text-balance md:text-xl/relaxed text-[#7E7E7E] mb-5">
             <a
               href="https://namastox.upf.edu"
@@ -213,9 +217,11 @@ export default function Home() {
             can be easily exported and shared.
           </span>
         </section>
+      </Fade>
+    
 
       </div>
-
+      <Fade>
       <div id="about" className="flex flex-row w-full bg-gray-50  mt-32">
         <div className="main flex flex-row w-full justify-around">
           <div className="flex flex-col">
@@ -360,7 +366,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div
+      </Fade>
+    
+<Fade>
+<div
         id="resources"
         className="flex flex-col items-center  pt-64 justify-center w-full  mb-64"
       >
@@ -389,6 +398,10 @@ export default function Home() {
         <TutorialsGuideComponent guide={guide} />
       </div>
 
+
+</Fade>
+
+  
       <footer className=" w-full  border-t border-dashed flex flex-col md:flex-row items-center justify-around text-neutral-600 py-3">
         <div className="flex flex-row gap-2">
           <Image
