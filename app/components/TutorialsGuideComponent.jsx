@@ -18,6 +18,7 @@ function TutorialsGuideComponent({ guide }) {
       <div className="flex flex-row flex-wrap gap-10 justify-center">
         {guide.map((element, index) => (
           <button
+          key={index}
             onClick={() => setActive(index)}
             className="cursor-pointer group flex flex-row gap-1.5 h-[30px] items-end"
           >
