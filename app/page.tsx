@@ -94,10 +94,8 @@ export default function Home() {
         </motion.div>
         <motion.div
           style={{ scale: scaleValueHeroText, opacity: opacityHeroText }}
-          className="preview-software border border-neutral-50 p-3  rounded-md relative   flex items-center justify-center"
-        >
-          <motion.video
-            initial={{
+          className="preview-software border border-neutral-50 p-3 rounded-md relative flex items-center justify-center"
+              initial={{
               opacity: 0,
               y: 100,
             }}
@@ -109,6 +107,9 @@ export default function Home() {
               // Transición por defecto para opacity y y (corre una sola vez)
               default: { duration: 0.8, ease: "easeInOut" },
             }}
+        >
+          <video
+        
             className="w-[1400px] object-cover rounded-md  "
             autoPlay
             muted
@@ -120,7 +121,7 @@ export default function Home() {
               src="/new_main_video_namastox.mp4"
               type="video/mp4"
             ></source>
-          </motion.video>
+          </video>
           <BorderBeam
             duration={12}
             size={400}
