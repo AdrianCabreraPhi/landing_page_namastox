@@ -8,9 +8,11 @@ import horizonte from "./assets/horizonte.png";
 import TutorialsGuideComponent from "./components/TutorialsGuideComponent";
 import guide from "./storage/ListTutorials";
 import { Fade } from "react-awesome-reveal";
-import { useEffect} from "react";
+import { useEffect } from "react";
 import "./globals.css";
 import { AnimatedShinyText } from "@/components/magicui/AnimatedShinyText";
+import { BorderBeam } from "@/components/magicui/border-beam";
+
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const scaleValueHeroText = useTransform(
@@ -19,8 +21,7 @@ export default function Home() {
     [1, 0.5, 0]
   );
 
-  useEffect(() => {
-  }, [scrollYProgress]);
+  useEffect(() => {}, [scrollYProgress]);
 
   const scaleHeroMainText = useTransform(
     scrollYProgress,
@@ -35,12 +36,11 @@ export default function Home() {
       {/* home */}
       <div
         id="home"
-        className="h-screen    w-full flex items-center justify-around   flex-col   gap-2"
+        className="h-screen w-full flex items-center justify-around   flex-col   gap-2"
       >
-
         <motion.div
           style={{ scale: scaleHeroMainText }}
-          className="flex flex-col hero-text items-center mt-20 gap-2"
+          className="flex  flex-col hero-text items-center mt-20 gap-2"
         >
           <motion.span
             initial={{ y: -100, opacity: 0 }}
@@ -68,7 +68,6 @@ export default function Home() {
               transition={{ delay: 0.8, duration: 0.7 }}
             >
               <div className="social-links  group flex flex-row transition-colors duration-300 ease-in-out hover:bg-neutral-50 gap-2 rounded-xl px-8 py-2 border border-dashed">
-                   
                 <TbBrandGithub
                   className="text-gray-400 transition-color duration-300 ease-in-out group-hover:text-gray-950"
                   size={27}
@@ -85,19 +84,22 @@ export default function Home() {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#4E4384] to-[#CE5D69] rounded-lg" />
               <div className="px-8 py-2 flex flex-row gap-2 items-center bg-white rounded-[6px] relative group transition duration-200 text-black hover:bg-transparent hover:text-white">
-             <AnimatedShinyText className="group-hover:text-white">Go Namastox</AnimatedShinyText><TbBrowserShare size={20} />
+                <AnimatedShinyText className="group-hover:text-white">
+                  Go Namastox
+                </AnimatedShinyText>
+                <TbBrowserShare size={20} />
               </div>
             </motion.a>
           </div>
         </motion.div>
         <motion.div
           style={{ scale: scaleValueHeroText, opacity: opacityHeroText }}
-          className="preview-software    flex items-center justify-center"
+          className="preview-software border border-neutral-50 p-3  rounded-md relative   flex items-center justify-center"
         >
-
           <motion.video
             initial={{
               opacity: 0,
+              y: 100,
             }}
             animate={{
               opacity: 1,
@@ -107,10 +109,11 @@ export default function Home() {
               // Transición por defecto para opacity y y (corre una sola vez)
               default: { duration: 0.8, ease: "easeInOut" },
             }}
-            className="w-[1400px] rounded-md  "
+            className="w-[1400px] object-cover rounded-md  "
             autoPlay
             muted
             loop
+            playsInline
           >
             <source src="/new_main_video_namastox.webm" type="video/webm" />
             <source
@@ -118,8 +121,17 @@ export default function Home() {
               type="video/mp4"
             ></source>
           </motion.video>
-
-
+          <BorderBeam
+            duration={12}
+            size={400}
+            className="from-transparent via-red-500 to-transparent"
+          />
+          <BorderBeam
+            duration={12}
+            delay={2.5}
+            size={400}
+            className="from-transparent via-blue-500 to-transparent"
+          />
         </motion.div>
       </div>
 
