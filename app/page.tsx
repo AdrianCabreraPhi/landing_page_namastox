@@ -95,21 +95,20 @@ export default function Home() {
         <motion.div
           style={{ scale: scaleValueHeroText, opacity: opacityHeroText }}
           className="preview-software border border-neutral-50 p-3 rounded-md relative flex items-center justify-center"
-              initial={{
-              opacity: 0,
-              y: 100,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              // Transición por defecto para opacity y y (corre una sola vez)
-              default: { duration: 0.8, ease: "easeInOut" },
-            }}
+          initial={{
+            opacity: 0,
+            y: 100,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            // Transición por defecto para opacity y y (corre una sola vez)
+            default: { duration: 0.8, ease: "easeInOut" },
+          }}
         >
           <video
-        
             className="w-[1400px] object-cover rounded-md  "
             autoPlay
             muted
@@ -414,33 +413,45 @@ export default function Home() {
         </div>
       </Fade>
 
-      <footer className=" w-full  border-t border-dashed flex flex-col md:flex-row items-center justify-around text-neutral-600 py-3">
-        <div className="flex flex-row gap-2">
+      <footer className=" w-full  border-t border-dashed grid grid-cols-1 sm:grid-cols-3 items-center justify-around text-neutral-600 py-3">
+        <div className="h-full p-2">
           <Image
             className="w-[250px]  rounded-r"
             src={horizonte}
             alt="horizonte 2020"
           />
-          <div className="flex flex-col">
-            <span className="text-md font-bold">Acknowledgments</span>
-            <span className="text-sm text-neutral-500">
-              Namastox has been developed for the project RISKHUNT3R{" "}
-              <a
-                className="text-neutral-600 transition-colors duration-300 ease-in-out hover:text-neutral-700"
-                href="https://www.risk-hunt3r.eu/"
-                target="_blank"
-              >
-                (https://www.risk-hunt3r.eu/)
-              </a>{" "}
-            </span>
-            <span className="text-sm text-balance">
-              This project has received funding from the European Union’s
-              Horizon 2020 research and innovation programme under grant
-              agreement No 964537.
-            </span>
-          </div>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex  p-3  gap-2 flex-col">
+          <span className="text-md font-bold">Acknowledgments</span>
+          <span className="text-sm text-neutral-500">
+            Namastox has been developed for the project RISKHUNT3R{" "}
+            <a
+              className="text-neutral-600 transition-colors duration-300 ease-in-out hover:text-neutral-700"
+              href="https://www.risk-hunt3r.eu/"
+              target="_blank"
+            >
+              (https://www.risk-hunt3r.eu/)
+            </a>{" "}
+          </span>
+          <span className="text-sm text-balance">
+            This project has received funding from the European Union’s Horizon
+            2020 research and innovation programme under grant agreement No
+            964537.
+          </span>
+
+          <span className="text-sm text-balance">
+            This work was supported by the project RISK-HUNT3R: RISK assessment
+            of chemicals integrating HUman centric Next generation Testing
+            strategies promoting the 3Rs. RISK-HUNT3R has received funding from
+            the European Union's Horizon 2020 research and innovation programme
+            under grant agreement No 964537 and is part of the ASPIS cluster.
+            This work reflects only the authors’ views, and the European
+            Commission is not responsible for any use that may be made of the
+            information it contains.
+          </span>
+          <span></span>
+        </div>
+        <div className="flex h-full flex-col items-center">
           <span className=" md:text-center text-sm md:text-current mt-2 md:mt-0">
             {" "}
             © Developed by Pharmacoinformatics Group of{" "}
